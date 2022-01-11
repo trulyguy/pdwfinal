@@ -1,0 +1,79 @@
+
+<div class="mainDiv">
+    <div class = "toolb">
+        <mat-toolbar color="primary">
+            <button mat-button [matMenuTriggerFor]="mainMenu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #mainMenu="matMenu">
+                <button mat-menu-item>Adicionar Despesa</button>
+                <button mat-menu-item [matMenuTriggerFor]="despesas">Despesas</button>
+                <button mat-menu-item [matMenuTriggerFor]="previsoes">Previsões</button>
+                <button mat-menu-item [matMenuTriggerFor]="excel">Excel</button>
+            </mat-menu>
+            
+            <mat-menu #despesas="matMenu">
+                <button mat-menu-item>Distribuição</button>
+                <button mat-menu-item>Evolução</button>
+                <button mat-menu-item>Gestão de Categorias/Subcategorias</button>
+            </mat-menu>
+            
+            <mat-menu #previsoes="matMenu">
+                <button mat-menu-item>Semanais</button>
+                <button mat-menu-item>Mensais</button>
+            </mat-menu>
+
+            <mat-menu #excel="matMenu">
+                <button mat-menu-item>Importar</button>
+                <button mat-menu-item>Exportar</button>
+            </mat-menu>
+            
+            <mat-menu #fish="matMenu">
+                <button mat-menu-item>Baikal oilfish</button>
+                <button mat-menu-item>Bala shark</button>
+                <button mat-menu-item>Ballan wrasse</button>
+                <button mat-menu-item>Bamboo shark</button>
+                <button mat-menu-item>Banded killifish</button>
+            </mat-menu>
+            
+            <mat-menu #amphibians="matMenu">
+                <button mat-menu-item>Sonoran desert toad</button>
+                <button mat-menu-item>Western toad</button>
+                <button mat-menu-item>Arroyo toad</button>
+                <button mat-menu-item>Yosemite toad</button>
+            </mat-menu>
+            
+            <mat-menu #reptiles="matMenu">
+                <button mat-menu-item>Visualizar</button>
+                <button mat-menu-item>Adicionar</button>
+                <button mat-menu-item>Remover</button>
+                <button mat-menu-item>Redestribuir</button>
+            </mat-menu>
+
+            <span>Controlo de despesas</span>
+            <span class="example-spacer"></span>
+            <button mat-icon-button>
+                <mat-icon matBadge="15" matBadgeColor="warn">notifications</mat-icon>
+            </button>
+
+
+
+            <button mat-button [matMenuTriggerFor]="perfil">
+                <mat-icon>person</mat-icon>
+            </button>
+            <mat-menu #perfil="matMenu">
+                <button mat-menu-item>Dados Pessoais</button>
+                <button mat-menu-item>Gerir conta</button>
+                <button mat-menu-item>Definições</button>
+            </mat-menu>
+        </mat-toolbar>
+    </div>
+    <div class="mainContent">
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile><p class="welcomeText">Bem Vindo, Username</p></mat-grid-tile>
+            <mat-grid-tile><img class="DashBGraf" src="../../assets/images/exampleDashGraf.gif"></mat-grid-tile>
+            <mat-grid-tile>3</mat-grid-tile>
+            <mat-grid-tile>4</mat-grid-tile>
+          </mat-grid-list>
+    </div>
+</div>

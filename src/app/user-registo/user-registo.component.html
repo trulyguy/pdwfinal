@@ -1,0 +1,20 @@
+<div class="container custom-container" style="max-width: 20%;" id="mainDiv">
+    <div class="col-md-12">
+        <h3 class="mb-3 text-center">Login</h3>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="userDetails.name" class="form-control" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="userDetails.email" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="userDetails.password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" (click)="authUser()">Login</button>
+        </div>
+        <div>
+          <a mat-button href="https://www.google.com/" target="_blank">Esqueceste a password?</a>
+        </div>
+      </div>
+  </div>
