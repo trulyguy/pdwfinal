@@ -19,8 +19,10 @@ import { GrafDespComponent } from './graf-desp/graf-desp.component';
 import { MatIcon } from '@angular/material/icon';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatBadgeModule} from '@angular/material/badge';
-import {MatListModule} from '@angular/material/list';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatListModule} from '@angular/material/list';
+import { MatGridListModule} from '@angular/material/grid-list';
+
+
 
 
 
