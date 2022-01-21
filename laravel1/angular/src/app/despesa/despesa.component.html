@@ -1,0 +1,52 @@
+<br>
+<div style = "text-align: center;">
+    <button type="button" class="btn btn-primary"(click)="openModal(template)">Add Despesa</button>
+</div>
+<br>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let despesa of despesas; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{despesa.nome}}</td>
+        <td>{{despesa.valor}}</td>
+        <td>{{despesa.tipo}}</td>
+      <td>
+          <button type="button" class="btn btn-info" (click)="openModal(template,despesa)">Edit</button>
+          <button type="button" class="btn btn-danger" (click)="delete(despesa)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  
+  <ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">{{modalTitle}}</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Nome Despesa</label>
+            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter Nome Despesa" [formControl]="nome">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Valor Despesa</label>
+            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter Valor Despesa"[formControl]="valor">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Tipo Despesa</label>
+            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter Tipo Despesa"[formControl]="tipo">
+        </div>
+        <button type="button" class="btn btn-primary"(click)="modalRef?.hide();save()">{{btnTitle}}</button>
+        </div>
+  </ng-template>
