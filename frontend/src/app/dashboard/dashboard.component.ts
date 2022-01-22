@@ -10,36 +10,14 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   dialog: any;  
+  panelOpenState = false
 
   constructor(private observer: BreakpointObserver, private router: Router) { }
-
-  // btnClickGraf(){
-  //   this.router.navigate(['/graf-desp']);
-  // }
-
-  // btnClickEditG(){
-  //   this.router.navigate(['/userLogin']);
-  // }
-
-  // btnClickAdic(){
-  //   this.router.navigate(['/userLogin']);
-  // }
-
-  // btnClickEvol(){
-  //   this.router.navigate(['/userLogin']);
-  // }
-
-  // btnClickEsperados(){
-  //   this.router.navigate(['/userLogin']);
-  // }
-
-  // btnClickPercent(){
-  //   this.router.navigate(['/userLogin']);
-  // }
-
-
 
   ngOnInit(): void {
   }
 
+  btnClickCategorias=  () => {
+    this.router.navigate(['/categorias']);
+}
 }

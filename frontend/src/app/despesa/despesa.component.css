@@ -9,7 +9,7 @@
 
 .sidenav-content {
   width: 100%;
-  display: flex;
+  display: absolute;
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -58,9 +58,22 @@
   left: 1%;
 }
 
-.mainContent{
-  position: absolute;
-  width: 100%;
-  top: 0;
-  height: 100%;
+.backIcon{
+    transform: scale(0.7);
+}
+
+.backBtn{
+    position: static;
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+    height: 5%;
+}
+
+.catBtn{
+    position: static;
+    background-color: transparent;
+    width: 100%;
+    text-align: lcenter;
+    height: 5%;
 }

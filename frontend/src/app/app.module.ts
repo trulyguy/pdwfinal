@@ -1,7 +1,8 @@
+import "@angular/compiler";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UtilizadoresComponent } from './utilizadores/utilizadores.component';
@@ -21,6 +22,17 @@ import { MatMenuModule} from '@angular/material/menu';
 import { MatBadgeModule} from '@angular/material/badge';
 import { MatListModule} from '@angular/material/list';
 import { MatGridListModule} from '@angular/material/grid-list';
+import { MatExpansionModule} from '@angular/material/expansion';
+import { MatTabsModule} from '@angular/material/tabs';
+import { CategoriasComponent } from './categorias/categorias.component';
+import { DespesaComponent } from './despesa/despesa.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalModule } from "ngx-bootstrap";
+
+
+
+
+
 
 
 
@@ -34,7 +46,9 @@ import { MatGridListModule} from '@angular/material/grid-list';
     PassRecoverComponent,
     HomePageComponent,
     UserRegistoComponent,
-    GrafDespComponent
+    GrafDespComponent,
+    CategoriasComponent,
+    DespesaComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +64,12 @@ import { MatGridListModule} from '@angular/material/grid-list';
     MatMenuModule,
     MatBadgeModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    MatExpansionModule,
+    MatTabsModule,
+    ReactiveFormsModule,
+    ModalModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

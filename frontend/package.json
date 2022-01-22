@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "-": "0.0.1",
     "@angular/animations": "~13.0.0",
     "@angular/cdk": "^13.1.0",
     "@angular/common": "~13.0.0",
@@ -21,12 +22,14 @@
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
     "material-design-icons": "^3.0.1",
+    "ngx-bootstrap": "^5.5.0",
     "rxjs": "~7.4.0",
+    "save": "^2.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.0.2",
+    "@angular-devkit/build-angular": "^13.1.4",
     "@angular/cli": "~13.0.2",
     "@angular/compiler-cli": "~13.0.0",
     "@types/jasmine": "~3.10.0",
