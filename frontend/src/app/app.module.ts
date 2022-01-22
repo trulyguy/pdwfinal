@@ -28,6 +28,8 @@ import { CategoriasComponent } from './categorias/categorias.component';
 import { DespesaComponent } from './despesa/despesa.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from "ngx-bootstrap";
+import { BarChartsComponent } from './bar-charts/bar-charts.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 
@@ -48,7 +50,8 @@ import { ModalModule } from "ngx-bootstrap";
     UserRegistoComponent,
     GrafDespComponent,
     CategoriasComponent,
-    DespesaComponent
+    DespesaComponent,
+    BarChartsComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +72,8 @@ import { ModalModule } from "ngx-bootstrap";
     MatTabsModule,
     ReactiveFormsModule,
     ModalModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

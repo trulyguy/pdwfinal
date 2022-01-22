@@ -8,6 +8,7 @@ import { PassRecoverComponent } from './pass-recover/pass-recover.component';
 import { GrafDespComponent } from './graf-desp/graf-desp.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { DespesaComponent } from './despesa/despesa.component';
+import { BarChartsComponent } from './bar-charts/bar-charts.component';
 
 
 const routes: Routes = [ 
@@ -18,7 +19,8 @@ const routes: Routes = [
    { path: 'passRecovery', component: PassRecoverComponent},
    { path: 'graf-desp', component: GrafDespComponent},
    { path: 'categorias', component: CategoriasComponent},
-   { path: 'despesa', component: DespesaComponent}
+   { path: 'despesa', component: DespesaComponent},
+   { path: 'charts', component: BarChartsComponent}
 
   ];
 
