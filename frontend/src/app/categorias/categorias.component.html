@@ -1,1 +1,89 @@
-<p>categorias works!</p>
+<mat-drawer-container class="container">
+
+  <!------------------------Content lado esquerdo------------------------------>
+      <mat-drawer class="sidenav" mode="side" opened>
+          <div class="logo">
+              <img class="img" src ="../../assets/logo.png">  
+            
+            </div>
+          <h2 class="sideTit">
+            <mat-icon class="dashIcon">chrome_reader_mode</mat-icon>
+            Categorias
+          </h2>
+          <mat-divider></mat-divider>
+          <br>
+            
+          
+          <!--------------Butao Despesas---------->
+          <button mat-button class="catBtn" (click)="seguirDashboard()">
+              <mat-icon>bar_chart</mat-icon>
+              Dashboard
+          </button>
+          <!--------------Butao Expansivel Categorias---------->
+          
+          <mat-expansion-panel class="expansDesp2" hideToggle>
+              <mat-expansion-panel-header>
+                <mat-icon>attach_money</mat-icon>
+                Despesas
+              </mat-expansion-panel-header>
+              <button mat-button class="sideBtn" (click)="seguirDespesas()" >Ver</button>
+          </mat-expansion-panel>
+         
+  
+          <!-------------Parte de baixo da side nav----------->
+  
+          <a href="perfil" class="aPerfil"><mat-icon>person</mat-icon>Perfil</a>
+          <a href="" class="aLogout"><mat-icon>logout</mat-icon>Logout</a>
+          
+      </mat-drawer>
+  
+
+      <div class="sidenav-content">
+        <br>
+      <div style = "text-align: center;">
+          <button type="button" class="btn btn-primary"(click)="openModal(template)">Adicionar Categoria</button>
+      </div>
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let categorias of categorias; index as i">
+              <th scope="row">{{i+1}}</th>
+              <td>{{categorias.nome}}</td>
+              <td>{{categorias.tipo}}</td>
+              <td>
+                  <button type="button" class="btn btn-info" (click)="openModal(template,categorias)">Edit</button>
+                  <button type="button" class="btn btn-danger" (click)="delete(categorias)">Delete</button>
+              </td>
+            </tr>
+
+            <ng-template #template>
+              <div class="modal-header">
+              <h4 class="modal-title pull-left">{{modalTitle}}</h4>
+              <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+                  <span aria-hidden="true" class="visually-hidden">&times;</span>
+              </button>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Nome Categoria</label>
+                      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter Nome Categoria" [formControl]="nome">
+                  </div>
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Tipo Categoria</label>
+                      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter Tipo Categoria"[formControl]="tipo">
+                  </div>
+                  <button type="button" class="btn btn-primary"(click)="modalRef?.hide();save()">{{btnTitle}}</button>
+                  </div>
+          </ng-template>
+          </tbody>
+        </table>
+      </div>
+      
+    </mat-drawer-container>

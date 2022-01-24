@@ -9,6 +9,8 @@ import { GrafDespComponent } from './graf-desp/graf-desp.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { DespesaComponent } from './despesa/despesa.component';
 import { BarChartsComponent } from './bar-charts/bar-charts.component';
+import { LoginComponent } from './login/login.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 const routes: Routes = [ 
@@ -20,8 +22,9 @@ const routes: Routes = [
    { path: 'graf-desp', component: GrafDespComponent},
    { path: 'categorias', component: CategoriasComponent},
    { path: 'despesa', component: DespesaComponent},
-   { path: 'charts', component: BarChartsComponent}
-
+   { path: 'charts', component: BarChartsComponent},
+   { path: 'login', component: LoginComponent},
+   { path: 'perfil', component: PerfilComponent}
   ];
 
 

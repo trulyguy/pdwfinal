@@ -1,7 +1,8 @@
 <table>
     <tr>
         <td>
-         <ngx-charts-line-chart [results]="productSales" 
+         <ngx-charts-line-chart 
+         [results]="productSalesMulti" 
          [view]="view"
          [gradient]="gradient"
          [xAxis]="showXAxis"
@@ -11,7 +12,8 @@
          [showYAxisLabel]="showYAxisLabel"
          [xAxisLabel]="xAxisLabel"
          [yAxisLabel]="yAxisLabel"
-         (select)="onSelect($event)">></ngx-charts-line-chart>
+         (select)="onSelect($event)">
+        </ngx-charts-line-chart>
     
      </td>
     </tr>

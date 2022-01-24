@@ -1,10 +1,13 @@
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Source+Serif+4:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:wght@700&family=Source+Serif+4:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap');
 .container {
   width: 100%;
   height: 100vh;
-  background-color: lightblue;
+  background: linear-gradient(#97CADB, #D6E8EE);
 }
 
 .sidenav-content {
@@ -13,16 +16,19 @@
   height: 100%;
   align-items: center;
   justify-content: center;
+  
 }
 
 .sidenav {
-  color: lightblue;
-  border-top-right-radius: 5%;
-  border-bottom-right-radius: 5%;
+  color: white;
+  border-top-right-radius: 2%;
+  border-bottom-right-radius: 2%;
   position: fixed;
   left: 0;
-  background-color: navy;
+  background: linear-gradient(#001b48, #02457a);
   width: 13%;
+  font-family: 'Andada Pro', sans-serif;
+  
 }
 
 .sideTit{
@@ -30,38 +36,146 @@
 }
 
 .dashIcon{
+ 
   transform: scale(1.5);
+  
 }
 
 .expansDesp{
-  color: lightblue;
+  color: whitesmoke;
   width: 100%;
   background-color: transparent;
+  border-radius: 2%;
+  background-color: solid navy;
+  line-height: 25px;
+}
+.expansDesp2{
+  top: 3%;
+  color: whitesmoke;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2%;
+  background-color: solid navy;
+  line-height: 25px;
 }
 
 .sideBtn{
+  font-family: 'Andada Pro', sans-serif;
   background-color: transparent;
   color: lightblue;
   width: 100%;
 }
 
 .aPerfil{
-  color: lightblue;
+  font-family: 'Andada Pro', sans-serif;
+  color: whitesmoke;
   position: absolute;
-  bottom: 6%;
+  bottom: 14%;
   left: 1%;
 }
 
 .aLogout{
-  color: lightblue;
+  font-family: 'Andada Pro', sans-serif;
+  color: whitesmoke;
   position: absolute;
-  bottom: 2%;
+  bottom: 10%;
   left: 1%;
 }
 
 .mainContent{
+  font-family: 'Andada Pro', sans-serif;
   position: absolute;
-  width: 100%;
-  top: 0;
-  height: 100%;
+  width: 95%;
+  top: 3%;
+  height: 95%;
+  box-shadow: 0px 0px 2px 1px  black;
+  background-color: #d6f1fc;
+  border-radius: 1%;
+
+
+}
+
+.donut{
+  position: fixed;
+  top: 10%;
+  border: 2px solid navy;
+  width:50%;
+  left:31%;
+}
+.evo{
+  position: fixed;
+  top: 10%;
+  border: 2px solid navy;
+  width:50%;
+  left:31%;
+
+}
+.total{
+  text-align: center;
+  position:fixed;
+  background-color: whitesmoke;
+  top: 70%;
+  left:30%;
+  width:10%;
+  height:10%;
+  border-radius: 3%;
+  line-height: 60px;
+  box-shadow: 0px 0px 2px 1px  black;
+}
+.totaltext{
+  position:fixed;
+  top:60%;
+  left:30%;
+}
+.most{ text-align: center;
+  position:fixed;
+  background-color: whitesmoke;
+  top: 70%;
+  left:50%;
+  width:10%;
+  height:10%;
+  border-radius: 3%;
+  line-height: 60px;
+  box-shadow: 0px 0px 2px 1px  black;
+
+}
+.mosttext{
+  position:fixed;
+  top:60%;
+  left:50%;
+
+}
+.cat{ text-align: center;
+  position:fixed;
+  background-color: whitesmoke;
+  top: 70%;
+  left:70%;
+  width:10%;
+  height:10%;
+  border-radius: 3%;
+  line-height: 60px;
+  box-shadow: 0px 0px 2px 1px  black;
+
+}
+.cattext{
+  position:fixed;
+  top:60%;
+  left:70%;
+  text-align: center;
+
+}
+.img{
+  position: fixed;
+  top:91%;
+  max-width: 100%;
+  height: 10.65%;
+  left: 0;
+}
+.img2{
+  position: fixed;
+  top:91%;
+  max-width: 100%;
+  height: 7%;
+  left: 4.4%;
+  
 }

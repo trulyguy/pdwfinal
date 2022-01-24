@@ -30,6 +30,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from "ngx-bootstrap";
 import { BarChartsComponent } from './bar-charts/bar-charts.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { DonutGraphComponent } from './donut-graph/donut-graph.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { LoginComponent } from "./login/login.component";
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
+
 
 
 
@@ -51,7 +58,10 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     GrafDespComponent,
     CategoriasComponent,
     DespesaComponent,
-    BarChartsComponent
+    BarChartsComponent,
+    DonutGraphComponent,
+    PerfilComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +83,10 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     ReactiveFormsModule,
     ModalModule.forRoot(),
     HttpClientModule,
-    NgxChartsModule
+    NgxChartsModule,
+    MatFormFieldModule,
+    MatInputModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

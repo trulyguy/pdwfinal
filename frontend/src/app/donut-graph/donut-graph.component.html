@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <td>
+         <ngx-charts-bar-vertical
+         [results]="productSalesMulti" 
+         [view]="view"
+         [gradient]="gradient"
+         [xAxis]="showXAxis"
+         [yAxis]="showYAxis"
+         [legend]="showLegend"
+         [showXAxisLabel]="showXAxisLabel"
+         [showYAxisLabel]="showYAxisLabel"
+         [xAxisLabel]="xAxisLabel"
+         [yAxisLabel]="yAxisLabel"
+         (select)="onSelect($event)">
+        </ngx-charts-bar-vertical>
+    
+     </td>
+    </tr>
+    
+    </table>

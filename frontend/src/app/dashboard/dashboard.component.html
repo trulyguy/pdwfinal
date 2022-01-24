@@ -1,6 +1,6 @@
 <html>
 <head>
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 </head>
 
 <body>
@@ -8,36 +8,39 @@
 
 <!------------------------Content lado esquerdo------------------------------>
     <mat-drawer class="sidenav" mode="side" opened>
+      <div class="logo">
+        <img class="img" src ="../../assets/logo.png">  
       
+      </div>
         <h2 class="sideTit">
           <mat-icon class="dashIcon">dashboard</mat-icon>
-          Dasboard
+          Dashboard
         </h2>
-        <mat-divider></mat-divider>
+       
         <br>
           
         
         <!--------------Botao Despesas---------->
         <mat-expansion-panel class="expansDesp" hideToggle>
             <mat-expansion-panel-header>
+              <mat-icon> attach_money</mat-icon>
               Despesas
             </mat-expansion-panel-header>
-            <button mat-button class="sideBtn">Ver</button>
-            <button mat-button class="sideBtn">Editar</button>
+            <button mat-button class="sideBtn" (click)="seguirDespesas()">Ver</button>
         </mat-expansion-panel>
 
         <!--------------Botao Expansivel Categorias---------->
-        <mat-expansion-panel class="expansDesp" hideToggle>
+        <mat-expansion-panel class="expansDesp2" hideToggle>
             <mat-expansion-panel-header>
+              <mat-icon>chrome_reader_mode</mat-icon>
               Categorias
             </mat-expansion-panel-header>
-            <button mat-button class="sideBtn" (click)="btnClickCategorias()">Ver</button>
-            <button mat-button class="sideBtn">Editar</button>
+            <button mat-button class="sideBtn" (click)="seguirCategorias()">Ver</button>
         </mat-expansion-panel>
 
         <!-------------Parte de baixo da side nav----------->
 
-        <a href="" class="aPerfil"><mat-icon>person</mat-icon>Perfil</a>
+        <a href="perfil" class="aPerfil"><mat-icon>person</mat-icon>Perfil</a>
         <a href="" class="aLogout"><mat-icon>logout</mat-icon>Logout</a>
         
     </mat-drawer>
@@ -46,19 +49,167 @@
 <!-----------------------Content Lado direito-------------------------->
     <div class="sidenav-content">
         <mat-tab-group mat-align-tabs="left" class="mainContent">
+          
             <mat-tab label="Distribuição de Despesas">
-
+              <div class="donut">
+                <app-donut-graph></app-donut-graph>
+              </div>
+              <div class = "totaltext">
+                <h1> Total gasto</h1>
+              </div>
+              <div class = "total">
+                <p></p>
+                <p></p> 
+                <p></p>
+                <p>
+                <h2>50€</h2> </div>
+                <div class = "mosttext">
+                  <h1> Maior Compra</h1>
+                </div>
+                <div class = "most">
+                  <p></p>
+                  <p></p> 
+                  <p></p>
+                  <p>
+                  <h2>20€</h2> </div>
+                  <div class = "cattext">
+                    <h1> Onde gastei mais?</h1>
+                  </div>
+                  <div class = "cat">
+                    <p></p>
+                    <p></p> 
+                    <p></p>
+                    <p>
+                    <h2>bra</h2> </div>
+              </mat-tab>
+              
+            <mat-tab label="Evolução das Despesas">
+              <div class="evo">
                 <app-bar-charts></app-bar-charts>
-
-
+              </div> 
+              <div class = "totaltext">
+                <h1> Total gasto</h1>
+              </div>
+              <div class = "total">
+                <p></p>
+                <p></p> 
+                <p></p>
+                <p>
+                <h2>50€</h2> </div>
+                <div class = "mosttext">
+                  <h1> Maior Compra</h1>
+                </div>
+                <div class = "most">
+                  <p></p>
+                  <p></p> 
+                  <p></p>
+                  <p>
+                  <h2>20€</h2> </div>
+                  <div class = "cattext">
+                    <h1> Onde gastei mais?</h1>
+                  </div>
+                  <div class = "cat">
+                    <p></p>
+                    <p></p> 
+                    <p></p>
+                    <p>
+                    <h2>bra</h2> </div>
+  
+            </mat-tab>       
+              
+            <mat-tab label="Gasto Mensal Esperado"> Content 3 
+              <div class = "totaltext">
+                <h1> Total gasto</h1>
+              </div>
+              <div class = "total">
+                <p></p>
+                <p></p> 
+                <p></p>
+                <p>
+                <h2>50€</h2> </div>
+                <div class = "mosttext">
+                  <h1> Maior Compra</h1>
+                </div>
+                <div class = "most">
+                  <p></p>
+                  <p></p> 
+                  <p></p>
+                  <p>
+                  <h2>20€</h2> </div>
+                  <div class = "cattext">
+                    <h1> Onde gastei mais?</h1>
+                  </div>
+                  <div class = "cat">
+                    <p></p>
+                    <p></p> 
+                    <p></p>
+                    <p>
+                    <h2>bra</h2> </div>
+             
             </mat-tab>
-            <mat-tab label="Evolução das Despesas"> Content 2 </mat-tab>
-            <mat-tab label="Gasto Mensal Esperado"> Content 3 </mat-tab>
-            <mat-tab label="Percentagem de Utilização"> Content 4 </mat-tab>
-            <mat-tab label="Previsões"> Content 5 </mat-tab>
+            <mat-tab label="Percentagem de Utilização"> Content 4
+              <div class = "totaltext">
+                <h1> Total gasto</h1>
+              </div>
+              <div class = "total">
+                <p></p>
+                <p></p> 
+                <p></p>
+                <p>
+                <h2>50€</h2> </div>
+                <div class = "mosttext">
+                  <h1> Maior Compra</h1>
+                </div>
+                <div class = "most">
+                  <p></p>
+                  <p></p> 
+                  <p></p>
+                  <p>
+                  <h2>20€</h2> </div>
+                  <div class = "cattext">
+                    <h1> Onde gastei mais?</h1>
+                  </div>
+                  <div class = "cat">
+                    <p></p>
+                    <p></p> 
+                    <p></p>
+                    <p>
+                    <h2>bra</h2> </div>
+               </mat-tab>
+            <mat-tab label="Previsões"> Content 5
+              <div class = "totaltext">
+                <h1> Total gasto</h1>
+              </div>
+              <div class = "total">
+                <p></p>
+                <p></p> 
+                <p></p>
+                <p>
+                <h2>50€</h2> </div>
+                <div class = "mosttext">
+                  <h1> Maior Compra</h1>
+                </div>
+                <div class = "most">
+                  <p></p>
+                  <p></p> 
+                  <p></p>
+                  <p>
+                  <h2>20€</h2> </div>
+                  <div class = "cattext">
+                    <h1> Onde gastei mais?</h1>
+                  </div>
+                  <div class = "cat">
+                    <p></p>
+                    <p></p> 
+                    <p></p>
+                    <p>
+                    <h2>Bra</h2> </div>
+              </mat-tab>
           </mat-tab-group>
     </div>
   
   </mat-drawer-container>
+ 
+  
 </body>
 </html>

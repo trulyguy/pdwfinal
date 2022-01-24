@@ -1,0 +1,98 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+</head>
+
+<body>
+<mat-drawer-container class="container">
+
+<!------------------------Content lado esquerdo------------------------------>
+    <mat-drawer class="sidenav" mode="side" opened>
+      <div class="logo">
+        <img class="img" src ="../../assets/logo.png">  
+      
+      </div>
+        <h2 class="sideTit">
+          <mat-icon class="dashIcon">dashboard</mat-icon>
+          Dashboard
+        </h2>
+       
+        <br>
+          
+        
+        <!--------------Botao Despesas---------->
+        <mat-expansion-panel class="expansDesp" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-icon> attach_money</mat-icon>
+              Despesas
+            </mat-expansion-panel-header>
+            <button mat-button class="sideBtn">Ver</button>
+            <button mat-button class="sideBtn">Editar</button>
+        </mat-expansion-panel>
+
+        <!--------------Botao Expansivel Categorias---------->
+        <mat-expansion-panel class="expansDesp2" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-icon>chrome_reader_mode</mat-icon>
+              Categorias
+            </mat-expansion-panel-header>
+            <button mat-button class="sideBtn" >Ver</button>
+            <button mat-button class="sideBtn">Editar</button>
+        </mat-expansion-panel>
+
+        <!-------------Parte de baixo da side nav----------->
+
+        <a href="" class="aPerfil"><mat-icon>person</mat-icon>Perfil</a>
+        <a href="" class="aLogout"><mat-icon>logout</mat-icon>Logout</a>
+        
+    </mat-drawer>
+
+
+<!-----------------------Content Lado direito-------------------------->
+    <div class="sidenav-content">
+        
+        <mat-tab-group mat-align-tabs="left" class="mainContent">
+         <mat-tab label="Perfil">
+            <div class="profileimage">
+                <h1>PROFILE IMAGE</h1>
+            </div>
+            <form class="form1">
+                <div class = "formcss">
+                <mat-form-field class="nomef" appearance="fill">
+                  <mat-label>Email</mat-label>
+                  <input matInput placeholder="ex123@hotmail.com" value="">
+                  
+                </mat-form-field>
+            </div>
+            <form class="form2">
+                <div class = "formcss2">
+                <mat-form-field class="nomef2" appearance="fill">
+                  <mat-label>Nome Completo</mat-label>
+                  <input matInput placeholder="" value="">
+                  
+                </mat-form-field>
+            </div>
+            <form class="form3">
+                <div class = "formcss3">
+                <mat-form-field class="nomef3" appearance="fill">
+                  <mat-label>Password</mat-label>
+                  <input matInput placeholder="123HZ53WE*" value="">
+                  
+                </mat-form-field>
+            </div>
+              </form>
+              </form>
+
+                
+              </form>
+              <button mat-button class="sideBtn">Confirmar</button>
+         </mat-tab>
+        
+
+        </mat-tab-group>
+          </div>
+          </mat-drawer-container>
+ 
+  
+</body>
+</html>

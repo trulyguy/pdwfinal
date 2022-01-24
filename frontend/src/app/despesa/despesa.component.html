@@ -2,9 +2,12 @@
 
     <!------------------------Content lado esquerdo------------------------------>
         <mat-drawer class="sidenav" mode="side" opened>
-          
+            <div class="logo">
+                <img class="img" src ="../../assets/logo.png">  
+              
+              </div>
             <h2 class="sideTit">
-              <mat-icon class="dashIcon">dashboard</mat-icon>
+              <mat-icon class="dashIcon">attach_money</mat-icon>
               Despesas
             </h2>
             <mat-divider></mat-divider>
@@ -12,18 +15,24 @@
               
             
             <!--------------Butao Despesas---------->
-            <button mat-buttton class="backBtn">
-                <mat-icon class="backIcon">keyboard_arrow_left</mat-icon>
-                Voltar
+            <button mat-button class="catBtn" (click)="seguirDashboard()">
+                <mat-icon>bar_chart</mat-icon>
+                Dashboard
             </button>
             <!--------------Butao Expansivel Categorias---------->
-            <button mat-buttton class="catBtn">
-                Categorias
-            </button>
+            
+            <mat-expansion-panel class="expansDesp2" hideToggle>
+                <mat-expansion-panel-header>
+                  <mat-icon>chrome_reader_mode</mat-icon>
+                  Categorias
+                </mat-expansion-panel-header>
+                <button mat-button class="sideBtn" (click)="seguirCategorias()" >Ver</button>
+            </mat-expansion-panel>
+           
     
             <!-------------Parte de baixo da side nav----------->
     
-            <a href="" class="aPerfil"><mat-icon>person</mat-icon>Perfil</a>
+            <a href="perfil" class="aPerfil"><mat-icon>person</mat-icon>Perfil</a>
             <a href="" class="aLogout"><mat-icon>logout</mat-icon>Logout</a>
             
         </mat-drawer>
